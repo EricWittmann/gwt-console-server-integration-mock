@@ -10,8 +10,8 @@
 
   <groupId>org.jboss.bpm</groupId>
   <artifactId>gwt-console-server-integration-mock</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <version>1.0.0</version>
+  <packaging>bundle</packaging>
 
   <properties>
     <!-- Instruct the build to use only UTF-8 encoding for source code -->
@@ -182,6 +182,24 @@
               <Implementation-URL>${project.url}</Implementation-URL>
             </manifestEntries>
           </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
+            <Bundle-Name>${project.name}</Bundle-Name>
+            <Bundle-Version>${project.version}</Bundle-Version>
+            <Export-Package>
+            </Export-Package>
+            <Import-Package>
+              javax.activation, org.jboss.bpm.console.client.model, org.jboss.bpm.console.server.plugin, 
+              org.osgi.service.blueprint, org.jboss.bpm.console.server.integration
+            </Import-Package>
+          </instructions>
         </configuration>
       </plugin>
     </plugins>

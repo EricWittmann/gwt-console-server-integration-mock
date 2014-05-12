@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint default-activation="eager" xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <bean id="management-factory" class="org.jboss.bpm.console.server.integration.mock.ManagementFactoryImpl" />
+  <service ref="management-factory" interface="org.jboss.bpm.console.server.integration.ManagementFactory" />
+
+  <bean id="form-dispatcher" class="org.jboss.bpm.console.server.plugin.mock.FormDispatcherPluginImpl" />
+  <service ref="form-dispatcher" interface="org.jboss.bpm.console.server.plugin.FormDispatcherPlugin" />
+
+  <bean id="graph-viewer" class="org.jboss.bpm.console.server.plugin.mock.GraphViewerPluginImpl" />
+  <service ref="graph-viewer" interface="org.jboss.bpm.console.server.plugin.GraphViewerPlugin" />
+
+  <bean id="process-activity" class="org.jboss.bpm.console.server.plugin.mock.ProcessActivityPluginImpl" />
+  <service ref="process-activity" interface="org.jboss.bpm.console.server.plugin.ProcessActivityPlugin" />
+
+  <bean id="process-engine" class="org.jboss.bpm.console.server.plugin.mock.ProcessEnginePluginImpl" />
+  <service ref="process-engine" interface="org.jboss.bpm.console.server.plugin.ProcessEnginePlugin" />
+
+  <bean id="process-history" class="org.jboss.bpm.console.server.plugin.mock.ProcessHistoryPluginImpl" />
+  <service ref="process-history" interface="org.jboss.bpm.console.server.plugin.ProcessHistoryPlugin" />
+
+</blueprint>

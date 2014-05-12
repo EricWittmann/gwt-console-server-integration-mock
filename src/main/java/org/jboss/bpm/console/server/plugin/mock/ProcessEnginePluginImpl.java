@@ -30,6 +30,13 @@ import org.jboss.bpm.console.server.plugin.ProcessEnginePlugin;
 public class ProcessEnginePluginImpl implements ProcessEnginePlugin {
     
     /**
+     * Constructor.
+     */
+    public ProcessEnginePluginImpl() {
+        System.out.println("[Process Engine Plugin Impl Created]");
+    }
+    
+    /**
      * @see org.jboss.bpm.console.server.plugin.ProcessEnginePlugin#getDeployments()
      */
     @Override

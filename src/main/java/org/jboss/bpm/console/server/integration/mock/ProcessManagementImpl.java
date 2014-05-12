@@ -33,6 +33,13 @@ import org.jboss.bpm.console.server.plugin.mock.DB;
  * @author eric.wittmann@redhat.com
  */
 public class ProcessManagementImpl implements ProcessManagement {
+    
+    /**
+     * Constructor.
+     */
+    public ProcessManagementImpl() {
+        System.out.println("[Process Management Impl Created]");
+    }
 
     /**
      * @see org.jboss.bpm.console.server.integration.ProcessManagement#getProcessDefinitions()
